@@ -115,13 +115,13 @@ def AnalysisCode(linelist):
         
         print(line, depth)
 
-        if "interface" in line:
+        if "interface" in line and "/" not in line:
             Mermaidcode.append("class " + cutName(line) + "{")
             Classlist.append(cutName(line))
             Mermaidcode.append("<<interface>>")
             interfacestart = True
 
-        if "class" in line:
+        if "class" in line and "/" not in line:
             Mermaidcode.append("class " + cutName(line) + "{")
             Classlist.append(cutName(line))
             classStart = True
