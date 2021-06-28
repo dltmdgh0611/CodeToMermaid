@@ -1,5 +1,4 @@
 import os
-from treelib import node, tree
 
 filelist = []
 linelist = []
@@ -199,7 +198,7 @@ def WriteMermaid(path):
     for CI in ConnectInfolist:
         f.writelines(CI + "\n")
 
-search("g:/autobot/CStoMermaid/codelist/")
+search("./codelist/")
 
 ReadallFile(filelist)
 
@@ -213,4 +212,4 @@ if tinymode:
 for i in ConnectInfolist:
     print(i)
 
-WriteMermaid("g:/autobot/CStoMermaid/result.md")
+WriteMermaid("./result.md")
